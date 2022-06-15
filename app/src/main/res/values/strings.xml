@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Zeew</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="join_us">Join Us</string>
+    <string name="login">Login</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="sign_in">Sign in</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="facebook_app_id">yourid</string>
+    <string name="fb_login_protocol_scheme">your protocol</string>
+</resources>
