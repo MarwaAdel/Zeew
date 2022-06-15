@@ -1,49 +1,27 @@
 package com.example.zeew.ui.auth
 
-import android.app.Application
-import android.content.Intent
 import android.view.View
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModel
 import com.example.zeew.data.repository.UserRepository
 
-class AuthViewModel : ViewModel(){
+class AuthViewModel : ViewModel() {
 
-    // define variable initial value is null that why ? use as null safety operator
     var email: String? = null
     var password: String? = null
-
-    // call auth listener interface for use as callback to activity
     var authListener: AuthListener? = null
 
 
-    // function for if user click on login button
-    fun onLoginButtonClick(view: View)
-    {
-        // when button click first we will call interface method on started here
+    fun onLoginButtonClick(view: View) {
         authListener?.onStarted()
-
-        // check data validation
-        if (email.isNullOrEmpty() || password.isNullOrEmpty())
-        {
-            // is user use wrong username of password/ set field in empty then call onFilure method from aithlostener
+        if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
             authListener?.onFailure("Invalid Username or Password")
-            // here return mean after execute the code it will be stop future execution
             return
-        }
-        else
-        {
-            // if Success call authlistener method
-            //authListener?.onSuccess()
-            // !! this operator will sure it is not null
+        } else {
             val loginResponseFromUserRepository = UserRepository().userLogin(email!!, password!!)
-            // here i pass roginResponseFromUserRepository here but i will have to add perameter oninterface so just press alt+enter to add it quickly
             authListener?.onSuccess(loginResponseFromUserRepository)
-
         }
 
     }
-
 
 
 }

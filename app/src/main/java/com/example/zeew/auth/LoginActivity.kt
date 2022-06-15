@@ -30,7 +30,9 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONException
+
 private const val TAG = "LoginActivity"
+
 class LoginActivity : AppCompatActivity(), AuthListener {
     lateinit var mGoogleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 9001
@@ -135,6 +137,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
             handleSignInResult(task)
         }
     }
+
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(
@@ -142,7 +145,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
             )
             // Signed in successfully
             val googleId = account?.id ?: ""
-            Log.i("Google ID",googleId)
+            Log.i("Google ID", googleId)
             val googleFirstName = account?.givenName ?: ""
             Log.i("Google First Name", googleFirstName)
             val googleLastName = account?.familyName ?: ""
@@ -162,6 +165,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
             )
         }
     }
+
     private fun signIn() {
         val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(

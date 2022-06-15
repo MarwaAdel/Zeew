@@ -5,20 +5,16 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 
-// functions to show show
-fun Context.myToast(message: String)
-{
+fun Context.myToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 }
 
-// Functions to show progressbar
-fun ProgressBar.show(){
+fun ProgressBar.show() {
 
     visibility = View.VISIBLE
 }
 
-// Functions to hide Progressbar
-fun ProgressBar.hide(){
+fun ProgressBar.hide() {
 
     visibility = View.GONE
 }

@@ -7,7 +7,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
-import retrofit2.http.Query
 
 interface MyApi {
     //For Register
@@ -34,7 +33,6 @@ interface MyApi {
         @Field("device_type") deviceType: String
     ): Call<ResponseBody>
 
-    // this below fuctions used for retrofit calling functions
     companion object {
         operator fun invoke(): MyApi {
             return Retrofit.Builder()

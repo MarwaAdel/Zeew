@@ -15,7 +15,7 @@ class UserRepository {
             LiveData<String> {
         val registerResponse = MutableLiveData<String>()
 
-        MyApi().userRegister("CustomerSignUp",firstName, lastName,email, "+20",phone,password,referralCode)
+        MyApi().userRegister("CustomerSignUp",firstName, lastName,email, phone,"+20",password,referralCode)
             .enqueue(object : Callback<ResponseBody> {
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
 
