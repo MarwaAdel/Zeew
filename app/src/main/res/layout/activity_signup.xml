@@ -3,9 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <!--    // inside this data tag we will define view model-->
-    <!--    // coz view model directly connect with UI look the edit text which has tag-->
-    <!--    // android:text="@={viewmodel.email}" in edit text automatically assign to authviewmodel object email//-->
     <data>
 
         <variable
